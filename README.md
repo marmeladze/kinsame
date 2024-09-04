@@ -1,10 +1,10 @@
-== Overview
+__Overview__
 
 This package contains a gRPC service for generating random numbers within 1 and 1000. The service is implemented in Python and uses PostgreSQL for data storage. It includes a server, a client, and tests to ensure functionality.
 
-== Setup
+__Setup__
 
-= Prerequisites
+_Prerequisites_
 
 * Docker
 * Docker Compose
