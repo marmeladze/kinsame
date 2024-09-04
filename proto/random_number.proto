@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package grpc_random_number_service;
+
+service RandomNumberService {
+    rpc GenerateRandomNumber (RandomNumberRequest) returns (RandomNumberResponse) {}
+}
+
+message RandomNumberRequest {
+}
+
+message RandomNumberResponse {
+    int32 random_number = 1;
+}

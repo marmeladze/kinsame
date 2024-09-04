@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: loremipsum
+      POSTGRES_PASSWORD: pa55w0rd
+      POSTGRES_DB: random_number_db
+    ports:
+      - "5432:5432"
+
+  grpc-server:
+    build: .
+    ports:
+      - "50051:50051"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://loremipsum:pa55w0rd@db:5432/random_number_db
+
